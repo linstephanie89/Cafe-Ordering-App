@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton coffeeButton;
     private ImageButton cartButton;
     private ImageButton historyButton;
-    private Order order = new Order();
+    private Order order = orderSingle.getInstance().getOrder();
     //private ArrayList<Order> orderList  = new ArrayList<>();
 
     /**
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public void donutClick(View view){
         Toast.makeText(this, "donut", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, donut_activity.class);
+        intent.putExtra("order", orderSingle.getInstance().getOrder());
         startActivity(intent);
     }
     public void coffeeClick(View view){

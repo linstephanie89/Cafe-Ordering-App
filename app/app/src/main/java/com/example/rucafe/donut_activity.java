@@ -54,6 +54,9 @@ public class donut_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donut);
+        order = orderSingle.getInstance().getOrder();
+        donut_activity donut = new donut_activity();
+        donut.setOrder(order);
         addToCart = findViewById(R.id.addToCart);
         donutImage = findViewById(R.id.donutImage);
         Spinner spinner = findViewById(R.id.spinnerDonut);

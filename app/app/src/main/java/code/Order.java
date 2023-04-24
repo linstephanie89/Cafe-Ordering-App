@@ -1,8 +1,9 @@
 package code;
+import java.io.Serializable;
 import java.util.*;
 
 
-public class Order {
+public class Order implements Serializable {
     private MenuItem[] Order;
     private int InitialCapacity = 4;
     private int size;
@@ -140,6 +141,7 @@ public class Order {
         }
         return returnString;
     }
+
 
     /**
      * Creates an ArrayList of MenuItems from the array in Order.
